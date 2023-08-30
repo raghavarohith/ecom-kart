@@ -1,0 +1,1 @@
+To check whether branches are created in a version control system like Git, you can use the following steps in a command-line interface (CLI) or a graphical user interface (GUI) tool like GitKraken, Sourcetree, or GitHub Desktop:
