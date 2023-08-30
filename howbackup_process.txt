@@ -1,0 +1,45 @@
+mkdir raghava
+mkdir backup_raghava
+
+/home/ec2-user/raghava
+/home/ec2-user/backup_raghava
+
+vi bkp.sh#!/bin/bash
+
+source_dir="/home/ec2-user/raghava"
+dest_dir="/home/ec2-user/backup_raghava"
+backup_filename="backup_$(date +%Y%m%d_%H%M%S).tar.gz"
+
+# Create backup directory if it doesn't exist
+mkdir -p "$dest_dir"
+
+# Create a backup using tar
+tar -czvf "$dest_dir/$backup_filename" "$source_dir"
+
+# Check if backup was successful
+if [ $? -eq 0 ]; then
+    echo "Backup successful."
+else
+    echo "Backup failed."
+    exit 1
+fi
+
+# Delete old backups if needed
+
+echo "Backup and cleanup complete."
+
+cd backup_raghava/
+ls
+
+backup_20230825_093501.tar.gz
+ tar -xvf backup_20230825_093501.tar.gz
+ls
+
+backup_20230825_093501.tar.gz  backup_20230825_093602.tar.gz  home
+
+ crontab -l
+
+* * * * * /home/ec2-user/bkp.sh
+
+
+

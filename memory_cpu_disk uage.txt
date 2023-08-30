@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Display CPU usage
+echo "CPU Usage:"
+top -bn 1 | grep '%Cpu'
+echo "---------------------------------------"
+
+# Display Disk Usage
+echo "Disk Usage:"
+df -h
+echo "---------------------------------------"
+
+# Display Memory Usage
+echo "Memory Usage:"
+free -h
+echo "---------------------------------------"
+\

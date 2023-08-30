@@ -1,0 +1,10 @@
+#!/bin/bash
+
+search="old_text"
+replace="new_text"
+target_dir="/path/to/target_directory"
+
+# Loop through each file in the target directory
+find "$target_dir" -type f -exec sed -i "s/$search/$replace/g" {} \;
+
+echo "Find and replace complete."
