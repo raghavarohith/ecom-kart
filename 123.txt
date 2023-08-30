@@ -1,0 +1,5 @@
+if you're using a GUI tool, the process might vary, but the general steps are as follows:
+
+Open the GUI tool and open your Git repository.
+Look for a section or tab that displays branches.
+In this section, you should see a list of existing branches, both local and remote.
